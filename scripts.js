@@ -23,7 +23,7 @@ for (let i = 0; i < pokemonList.length; i++) {
       );
     } else {
       document.write(
-        pokemonList[i].name + ':' + ` (Height: ${pokemonList[i].height})` //will type out other pokemon now >7
+        pokemonList[i].name + ':' + ` (Height: ${pokemonList[i].height})` //will type out other pokemon not >7
       );
     }
     //adds a row space in-between each pokemon entry
