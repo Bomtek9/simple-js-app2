@@ -14,5 +14,18 @@ let pokemonList = [// database of pokemon for the pokedex
     height: '6',
     types: ['fire'],
 }
-
 ]
+
+for (let i = 0; i < pokemonList.length; i++) {
+    if (pokemonList[i].height > 7) {
+      document.write(
+        pokemonList[i].name + ':' + ` (Height: ${pokemonList[i].height})` + ' - WOW, that\'s a big one!'
+      );
+    } else {
+      document.write(
+        pokemonList[i].name + ':' + ` (Height: ${pokemonList[i].height})`
+      );
+    }
+    //adds a row space in-between each pokemon entry
+    document.write('<br> <br>') 
+  }
