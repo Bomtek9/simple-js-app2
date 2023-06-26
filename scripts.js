@@ -1,32 +1,38 @@
-let pokemonList = [// database of pokemon for the pokedex
+let turtleList = [// database of pokemon for the pokedex
 { 
-    name: 'Bulbasur', 
+    name: 'Leonardo', 
     height: '7',
-    types: ['grass','poison'],
+    types: ['leader'],
 },
 {
-    name: 'Pikachu',
-    height: '12',
-    types: ['electric'],
+    name: 'Donatello',
+    height: '7.5',
+    types: ['brains'],
 },
 {
-    name: 'Charmander',
-    height: '6',
-    types: ['fire'],
+    name: 'Raphael',
+    height: '7.2',
+    types: ['angry'],
+},
+
+{
+  name: 'Michaelangelo',
+  height: '7.3',
+  types: ['funny'],
 }
 ]
 
-for (let i = 0; i < pokemonList.length; i++) {
-    if (pokemonList[i].height > 7) {
+for (let i = 0; i < turtleList.length; i++) {
+    if (turtleList[i].height < 7.1) {
       document.write(
-        pokemonList[i].name + ':' + ` (Height: ${pokemonList[i].height})` + ' - WOW, that\'s a big one!'
+        turtleList[i].name + ':' + ` (Height: ${turtleList[i].height})` + ' - I am the leader!'
       );
     } else {
       document.write(
-        pokemonList[i].name + ':' + ` (Height: ${pokemonList[i].height})` //will type out other pokemon not >7
+        turtleList[i].name + ':' + ` (Height: ${turtleList[i].height})` //will type out other turtles not >7.1
       );
     }
-    //adds a row space in-between each pokemon entry
+    //adds a row space in-between each turtle entry
     document.write('<br> <br>') 
   }
 
