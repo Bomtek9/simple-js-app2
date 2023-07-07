@@ -1,4 +1,6 @@
-let turtleList = [// database of pokemon for the pokedex
+let turtlesRepository = (function() { //IIFE
+
+let turtleList = [// database of turtles for the turtledex
 { 
     name: 'Leonardo', 
     height: '7',
@@ -7,7 +9,7 @@ let turtleList = [// database of pokemon for the pokedex
 {
     name: 'Donatello',
     height: '7.5',
-    types: ['brains'],
+    types: ['smart'],
 },
 {
     name: 'Raphael',
@@ -20,19 +22,20 @@ let turtleList = [// database of pokemon for the pokedex
   height: '7.3',
   types: ['funny'],
 }
-]
+];
 
-for (let i = 0; i < turtleList.length; i++) {
-    if (turtleList[i].height < 7.1) {
-      document.write(
-        turtleList[i].name + ':' + ` (Height: ${turtleList[i].height})` + ' - I am the leader!'
-      );
-    } else {
-      document.write(
-        turtleList[i].name + ':' + ` (Height: ${turtleList[i].height})` //will type out other turtles not >7.1
-      );
-    }
-    //adds a row space in-between each turtle entry
-    document.write('<br> <br>') 
-  }
+ 
+return {
+  add: function (turtles) {
+     turtleList.push(turtles);
+  },
+  getAll: function () {
+     return turtleList;
+  },
+};
+})();
 
+
+turtlesRepository.getAll().forEach(function (turtles) {
+document.write(turtles.name + "is" + turtles.height + "and" + turtles.types);
+});
