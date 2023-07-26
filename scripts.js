@@ -1,42 +1,68 @@
-let turtlesRepository = (function() { //IIFE
-
-let turtleList = [// database of turtles for the turtledex
-{ 
+let turtleRepository = (function() { //IIFE
+    let turtleList = [// database of turtles for the turtledex
+  { 
     name: 'Leonardo', 
     height: '5.9',
     types: ['in charge'],
-},
-{
+  },
+  {
     name: 'Donatello',
     height: '6.6',
     types: ['smart'],
-},
-{
+  },
+  {
     name: 'Raphael',
     height: '6',
     types: ['angry'],
-},
+  },
 
-{
+  {
   name: 'Michaelangelo',
   height: '5.6',
   types: ['funny'],
-}
-];
-
- 
-return {
-  add: function (turtles) {
-     turtleList.push(turtles);
-  },
-  getAll: function () {
-     return turtleList;
-  },
-};
-})();
+  }
+  ];
+  });
 
 
-turtlesRepository.getAll().forEach(function (turtles) {
-document.write(turtles.name + " is " + turtles.height + " feet tall and " + turtles.types);
-document.write('<br> <br>') 
+  function add(turtle) {
+    turtleList.push(turtle);
+    };
+
+
+  function getAll() {
+    return turtleList;
+    };
+
+ //Put the item in the pokemonList onto the page
+  function addListItem(turtle) {
+    let turtleList = document.querySelector('.turtle-list');
+    let turtleListItem = document.createElement('li');
+
+  //Create button in the list item
+  let button = document.createElement('button');
+  button.classList.add('turtle-button');
+  button.innerText = turtle.name;
+  
+
+
+  button.addEventListener('click', function () {
+    showDetails(turtle);
+
+  turtleListItem.appendChild(button);
+  turtleList.appendChild(turtleListItem);
+  
+  });
+  }
+
+
+
+
+
+
+
+turtleRepositoryRepository.loadList().then(() => {
+  turtleRepositoryRepository.getAll().forEach((turtle) => {
+      turtleRepositoryRepository.addListItem(turtle);
+  });
 });
