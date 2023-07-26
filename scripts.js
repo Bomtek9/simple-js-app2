@@ -41,19 +41,16 @@ let turtleRepository = (function() { //IIFE
 
   //Create button in the list item
   let button = document.createElement('button');
-  button.classList.add('turtle-button');
+  button.classList.add('list-button');
   button.innerText = turtle.name;
-  
+  turtleListItem.appendChild(button);
+  turtleList.appendChild(turtleListItem);
 
 
   button.addEventListener('click', function () {
-    showDetails(turtle)
-    document.write(turtle);
+    showDetails(turtle);
   });
 
-  turtleListItem.appendChild(button);
-  turtleList.appendChild(turtleListItem);
-  
   }
 
 
