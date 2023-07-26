@@ -47,12 +47,13 @@ let turtleRepository = (function() { //IIFE
 
 
   button.addEventListener('click', function () {
-    showDetails(turtle);
+    showDetails(turtle)
+    document.write(turtle);
+  });
 
   turtleListItem.appendChild(button);
   turtleList.appendChild(turtleListItem);
   
-  });
   }
 
 
