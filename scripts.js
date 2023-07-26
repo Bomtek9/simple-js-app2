@@ -3,23 +3,23 @@ let turtlesRepository = (function() { //IIFE
 let turtleList = [// database of turtles for the turtledex
 { 
     name: 'Leonardo', 
-    height: '7',
-    types: ['leader'],
+    height: '5.9',
+    types: ['in charge'],
 },
 {
     name: 'Donatello',
-    height: '7.5',
+    height: '6.6',
     types: ['smart'],
 },
 {
     name: 'Raphael',
-    height: '7.2',
+    height: '6',
     types: ['angry'],
 },
 
 {
   name: 'Michaelangelo',
-  height: '7.3',
+  height: '5.6',
   types: ['funny'],
 }
 ];
@@ -37,5 +37,6 @@ return {
 
 
 turtlesRepository.getAll().forEach(function (turtles) {
-document.write(turtles.name + "is" + turtles.height + "and" + turtles.types);
+document.write(turtles.name + " is " + turtles.height + " feet tall and " + turtles.types);
+document.write('<br> <br>') 
 });
