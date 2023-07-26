@@ -1,26 +1,26 @@
-let turtleRepository = (function() { //IIFE
+var turtleRepository = (function() { //IIFE
     let repository = [// database of turtles for the turtledex
   { 
     name: 'Leonardo', 
-    height: '5.9',
+    height: 5.9,
     types: ['in charge'],
   },
   {
     name: 'Donatello',
-    height: '6.6',
+    height: 6.6,
     types: ['smart'],
   },
   {
     name: 'Raphael',
-    height: '6',
+    height: 6,
     types: ['angry'],
   },
 
   {
   name: 'Michaelangelo',
-  height: '5.6',
+  height: 5.6,
   types: ['funny'],
-  },
+    },
   ];
 
 
@@ -34,7 +34,7 @@ let turtleRepository = (function() { //IIFE
     ) {
       repository.push(turtle);
     } else {
-      document.write("Turtle is not correct");
+      console.log.write("Turtle is not correct");
     }
   }
 
@@ -49,29 +49,22 @@ let turtleRepository = (function() { //IIFE
       button.classList.add('list-button');
       listTurtle.appendChild(button);
       turtleList.appendChild(listTurtle);
-    }
+      button.addEventListener("click", function (event) {
+        showDetails(turtle);
+        
+    });
 
     return {
       add: add,
       getAll: getAll,
       addListItem: addListItem,
     };
-  })();
+  }
 
-  document.write(turtleRepository.getAll());
+  console.log(turtleRepository.getAll());
 
   turtleRepository.getAll().forEach(function (turtle) {
     pokemon.addListItem(turtle);
 
 }); 
-  
-
-  
-
-
-
-
-
-
-
-
+});
