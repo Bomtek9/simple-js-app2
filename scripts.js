@@ -1,6 +1,7 @@
+// Creating an IIFE (Immediately Invoked Function Expression) to encapsulate the code and avoid polluting the global scope.
 var turtleRepository = (function() {
+  // Array containing the database of turtles for the turtledex
   let repository = [
-    // database of turtles for the turtledex
     {
       name: 'Leonardo',
       height: 5.9,
@@ -23,6 +24,7 @@ var turtleRepository = (function() {
     },
   ];
 
+  // Function to add a turtle to the repository if it has the required properties
   function add(turtle) {
     if (
       typeof turtle === 'object' &&
@@ -32,14 +34,17 @@ var turtleRepository = (function() {
     ) {
       repository.push(turtle);
     } else {
+      // If the turtle object is missing required properties, log an error message
       console.log("Turtle is not correct");
     }
   }
 
+  // Function to retrieve all turtles from the repository
   function getAll() {
     return repository;
   }
 
+  // Function to add a list item (button representing a turtle) to the HTML page
   function addListItem(turtle) {
     let turtleList = document.querySelector('.turtle-list');
     let listTurtle = document.createElement('li');
@@ -48,11 +53,13 @@ var turtleRepository = (function() {
     button.classList.add('list-button');
     listTurtle.appendChild(button);
     turtleList.appendChild(listTurtle);
+    // Add a click event listener to the button to show details of the clicked turtle
     button.addEventListener('click', function (event) {
       showDetails(turtle);
     });
   }
 
+  // Expose public methods to the outside world using the revealing module pattern
   return {
     add: add,
     getAll: getAll,
@@ -60,9 +67,12 @@ var turtleRepository = (function() {
   };
 })();
 
+// Execute code when the DOM has finished loading
 document.addEventListener('DOMContentLoaded', function () {
+  // Log all the turtles in the repository to the console
   console.log(turtleRepository.getAll());
 
+  // For each turtle in the repository, add a corresponding list item (button) to the HTML page
   turtleRepository.getAll().forEach(function (turtle) {
     turtleRepository.addListItem(turtle);
   });
