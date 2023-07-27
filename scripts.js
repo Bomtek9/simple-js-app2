@@ -55,8 +55,18 @@ var turtleRepository = (function() {
     turtleList.appendChild(listTurtle);
     // Add a click event listener to the button to show details of the clicked turtle
     button.addEventListener('click', function (event) {
-      showDetails(turtle);
+      showDetails(turtle.height );
     });
+  }
+
+  function showDetails(turtle) {
+    // Check if the 'types' property exists and is an array
+    if (turtle.types && Array.isArray(turtle.types)) {
+      console.log(turtle.name + ' - ' + turtle.height + ' - ' + turtle.types.join(', '));
+    } else {
+      // Handle the case where 'types' is missing or not an array
+      console.log(turtle.name + ' - ' + turtle.height + ' - Types information missing or invalid.');
+    }
   }
 
   // Expose public methods to the outside world using the revealing module pattern
