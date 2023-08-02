@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Clay's App</title>
-    <link rel="shortcut icon" href="img/logosolo.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>simple-js-app</title>
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <img src="img/tmnt.jpg" alt="Turtle Ninja" width="300" height="200">
-    <script src="scripts.js"></script> 
-    <ul class="turtle-list"></ul>
-  </body>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pokedex</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+
+    <body>
+        <!-- Main Title and List -->
+        <div> 
+            <h1>POKEDEX</h1>
+        </div>
+        <div class="mainlist">
+            <ul style="list-style-type: none;" class="pokemon-list"></ul>
+        </div>
+
+        <!-- Modals -->
+       <!--  <div>
+            <button id="show-modal">Show modal</button>
+        </div> -->
+        
+        <div id="modal-container">
+        </div>
+
+        <!-- Javascript Reference -->
+        <script src="js/scripts.js"></script>
+
+    </body>
+
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch-polyfill.js"></script>
+    <script src="js\tota11y.min.js"></script>
+
 </html>
