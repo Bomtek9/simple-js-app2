@@ -1,7 +1,7 @@
 
 
 h1 {
-    color: darkslategray;
+    color: rgb(125, 13, 142);
     text-align: center;
     font-weight: bolder;
     text-transform: uppercase;
@@ -21,14 +21,14 @@ h1 {
 }
 
 .button-class {
-    background-color: rgb(65, 65, 194);
+    background-color: rgb(79, 34, 135);
     border-radius: 7px;
     padding: 6px;
     color: white;
     margin-top: 9px;
     font-size: 30px;
     font-weight: 700;
-    border-color: silver;
+    border-color: rgb(222, 176, 12);
     border-width: 3px;
     cursor: pointer;
     text-transform: capitalize;
