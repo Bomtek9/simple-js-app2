@@ -1,12 +1,1 @@
-{
-    "env": {
-      "es6": true,
-      "browser": true
-    },
-    "extends": [
-      "eslint:recommended"
-    ],
-    "rules": {
-      "quotes": ["error", "single"]
-    }
-  }
+:root{--text-color:rgb(195, 169, 40);--accent-color:rgba(78, 110, 129, 1);--screen-color:rgb(0, 0, 0);--background-color:rgb(96, 44, 217)}h1{font-family:'Roboto Mono', monospace;font-size:30px;font-weight:700;color:rgb(227, 187, 44);text-shadow:3px 3px rgba(78, 110, 129, 1);text-align:left}div.pokedex{background:rgba(96, 44, 217);border:5px solid rgb(0, 0, 0);max-width:425px;display:flex;flex-direction:column;align-items:center;margin:auto}.navbar{display:flex;width:95%;justify-content:space-between;margin:10px}.navbar-nav{max-width:100%;flex-direction:row;flex-wrap:wrap}.nav-item{display:inline;width:50%}.nav-link{font-family:'Roboto Mono', monospace;font-size:16px;font-weight:700;text-align:left;transition:font-size 500ms}.nav-link:hover{font-size:17px}.pokedex__main{width:90%;margin:0 0 20px}.pokemon-list{list-style-type:none;padding:0;margin:0;width:100%}.list-button{font-family:'Roboto Mono', monospace;font-size:16px;font-weight:400;background-color:rgba(46, 56, 64, 1);color:rgba(249, 219, 187, 1);border:2px solid rgb(198, 195, 25);width:100%;height:auto;padding:5px 20px;margin:5px 0;text-align:left}.list-group-item{background-color:rgba(159, 149, 13, 0);padding:0;border:rgba(0, 0, 0, 0)}.modal-container{display:none}.modal-content{position:relative;margin:auto;display:inline-block;box-sizing:border-box;background:rgba(96, 44, 217);border:2px solid rgba(78, 110, 129, 1);color:rgba(0, 0, 0, 0.5);padding:15px;height:auto;width:100%;max-width:700px;text-align:left}.modal-content h1{margin-top:0}.modal-content p{margin-bottom:0;font-family:'Roboto Mono', monospace;font-size:16px;font-weight:400;background-color:rgba(46, 56, 64, 1);color:rgba(249, 219, 187, 1);border:2px solid rgba(78, 110, 129, 1);width:auto;height:auto;padding:5px 20px;margin:5px 0}.modal-close{float:right;border:0;background:none;color:rgba(249, 219, 187, 1);text-decoration:underline;opacity:1;text-shadow:none;font-weight:400;font-size:16px;line-height:normal}.modal-content img{float:right;max-width:200px;max-height:200px;width:100%}@media screen and (max-width: 420px){.modal-content img{max-width:170px;max-height:170px}}@media screen and (max-width: 370px){.modal-content img{max-width:110px;max-height:110px}}
